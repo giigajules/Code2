@@ -13,9 +13,10 @@ var LinterTest;
     console.log(deCrypt(info.text, info.key));
     function deCrypt(_text, _key) {
         let result = "";
-        for (let i = 0; i < _text.length; i++) {
+        for (let i = 0; i < _text.length; i++)
             result += String.fromCharCode(_text.charCodeAt(i) + _key);
-        }
         return result;
     }
+    //F2 for renaming something in the whole document
+    //Alt Shift F fixes formatting -> good for seeing missing curlyboys
 })(LinterTest || (LinterTest = {}));

@@ -25,5 +25,8 @@ namespace LinterTest {
     return result;
   }
   
+  //F2 for renaming something in the whole document
+  //Alt Shift F fixes formatting -> good for seeing missing curlyboys
+  //cd LinterTest in terminal to change folder
 
 }
