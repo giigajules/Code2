@@ -19,7 +19,7 @@ namespace LinterTest {
 
   function deCrypt(_text: string, _key: number): string {
     let result: string = "";
-    for (let i:number = 0; i < _text.length; i++){
+    for (let i: number = 0; i < _text.length; i++){
       result += String.fromCharCode(_text.charCodeAt(i) + _key)
     }
     return result;
