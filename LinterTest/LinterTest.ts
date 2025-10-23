@@ -1,8 +1,8 @@
 namespace LinterTest {
 
   interface Info {
-    text: string;
-    key: KEY;
+    text: string,
+    key: KEY
   }
 
   enum KEY {
