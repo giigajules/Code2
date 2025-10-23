@@ -22,3 +22,4 @@ var LinterTest;
     //Alt Shift F fixes formatting -> good for seeing missing curlyboys
     //cd LinterTest in terminal to change folder
 })(LinterTest || (LinterTest = {}));
+//# sourceMappingURL=LinterTest.js.map
