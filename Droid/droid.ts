@@ -52,7 +52,7 @@ export namespace Droid {
     }
 
     function moveRandomly(): Command {
-        const randomizer: number = getRandomNumber(3);
+        const randomizer: number = getRandomNumber(4);
         if (randomizer == 0)
             return forward;
         else if (randomizer == 1)

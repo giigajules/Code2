@@ -30,7 +30,7 @@ export var Droid;
         return Math.floor(Math.random() * _max);
     }
     function moveRandomly() {
-        const randomizer = getRandomNumber(3);
+        const randomizer = getRandomNumber(4);
         if (randomizer == 0)
             return forward;
         else if (randomizer == 1)
