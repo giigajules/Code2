@@ -23,16 +23,17 @@ namespace Canvas {
 
         userInput();
         drawTriangleCircle(radius, numPieces);
+        //drawRandomTriangles(200);
     }
 
-    function drawTriangle(_centerPoint: Vector2, _firstVec: Vector2, _secondVec: Vector2): void {
+    function drawTriangle(_centerPoint: Vector2, _firstVec: Vector2, _secondVec: Vector2, _fillColor: string): void {
         const triangle: Path2D = new Path2D();
         triangle.moveTo(_centerPoint.x, _centerPoint.y);
         triangle.lineTo(_firstVec.x, _firstVec.y);
         triangle.lineTo(_secondVec.x, _secondVec.y);
         triangle.closePath();
 
-        crc2.fillStyle = "#e64e6cff";
+        crc2.fillStyle = _fillColor;
         crc2.fill(triangle);
         crc2.strokeStyle = "#000000";
         crc2.stroke(triangle);
@@ -43,8 +44,13 @@ namespace Canvas {
         numPieces = parseInt(prompt("Enter its number of pieces: ", "1") || "5", 10);
     }
 
+    function getRandomNumber(_max: number): number {
+        return Math.floor(Math.random() * _max);
+    }
+
     function drawTriangleCircle(_radius: number, _numPieces: number): void {
         const centerPoint: Vector2 = {x: 700, y: 400};
+        const fillColor: string = "#e4576eff"
         for (let i: number = 0; i < _numPieces; i++) {
             const x1: number = Math.sin(Math.PI * 2 / _numPieces * i) * _radius + centerPoint.x;
             const y1: number = Math.cos(Math.PI * 2 / _numPieces * i) * _radius + centerPoint.y;
@@ -52,7 +58,17 @@ namespace Canvas {
             const y2: number = Math.cos(Math.PI * 2 / _numPieces * (i+1)) * _radius + centerPoint.y;
             const firstVec: Vector2 = {x: x1, y: y1};
             const secondVec: Vector2 = {x: x2, y: y2};
-            drawTriangle(centerPoint, firstVec, secondVec);
+            drawTriangle(centerPoint, firstVec, secondVec, fillColor);
+        }
+    }
+
+    function drawRandomTriangles(_numTriangles: number): void {
+        for (let i: number = 0; i < _numTriangles; i++) {
+            const centerPoint: Vector2 = {x: getRandomNumber(canvas.width), y: getRandomNumber(canvas.height)};
+            const firstVec: Vector2 = {x: getRandomNumber(canvas.width), y: getRandomNumber(canvas.height)};
+            const secondVec: Vector2 = {x: getRandomNumber(canvas.width), y: getRandomNumber(canvas.height)};
+            const fillColor: string = '#'+(Math.random() * 0xFFFFFF << 0).toString(16).padStart(6, '0');
+            drawTriangle(centerPoint, firstVec, secondVec, fillColor);
         }
     }
 }
