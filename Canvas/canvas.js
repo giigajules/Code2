@@ -2,6 +2,9 @@
 var Canvas;
 (function (Canvas) {
     document.addEventListener("DOMContentLoaded", hndLoad);
+    document.getElementById("pizza").onclick = hndPizza;
+    document.getElementById("randomTriangles").onclick = hndRandomTriangles;
+    document.getElementById("clearCanvas").onclick = hndClearCanvas;
     let canvas;
     let crc2;
     let radius;
@@ -13,9 +16,16 @@ var Canvas;
         canvas.width = 1520;
         crc2.fillStyle = "#65e49eff";
         crc2.fillRect(0, 0, canvas.width, canvas.height);
-        userInput();
+    }
+    function hndPizza() {
+        circleInput();
         drawTriangleCircle(radius, numPieces);
-        //drawRandomTriangles(200);
+    }
+    function hndRandomTriangles() {
+        drawRandomTriangles(randTriangleInput());
+    }
+    function hndClearCanvas() {
+        crc2.clearRect(0, 0, canvas.width, canvas.height);
     }
     function drawTriangle(_centerPoint, _firstVec, _secondVec, _fillColor) {
         const triangle = new Path2D();
@@ -28,9 +38,13 @@ var Canvas;
         crc2.strokeStyle = "#000000";
         crc2.stroke(triangle);
     }
-    function userInput() {
-        radius = parseInt(prompt("Enter the radius of the triangle-circle: ", "1") || "1", 10);
-        numPieces = parseInt(prompt("Enter its number of pieces: ", "1") || "5", 10);
+    function circleInput() {
+        radius = parseInt(prompt("Enter the radius of the triangle-circle:", "1") || "100", 10);
+        numPieces = parseInt(prompt("Enter its number of pieces:", "1") || "5", 10);
+    }
+    function randTriangleInput() {
+        const randTriangleCount = parseInt(prompt("How many triangles do you want to create?", "1") || "1", 10);
+        return randTriangleCount;
     }
     function getRandomNumber(_max) {
         return Math.floor(Math.random() * _max);
