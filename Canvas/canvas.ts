@@ -36,6 +36,8 @@ namespace Canvas {
 
     function hndClearCanvas(): void {
         crc2.clearRect(0, 0, canvas.width, canvas.height);
+        crc2.fillStyle = "#65e49eff";
+        crc2.fillRect(0, 0, canvas.width, canvas.height);
     }
 
     function drawTriangle(_centerPoint: Vector2, _firstVec: Vector2, _secondVec: Vector2, _fillColor: string): void {

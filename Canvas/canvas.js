@@ -26,6 +26,8 @@ var Canvas;
     }
     function hndClearCanvas() {
         crc2.clearRect(0, 0, canvas.width, canvas.height);
+        crc2.fillStyle = "#65e49eff";
+        crc2.fillRect(0, 0, canvas.width, canvas.height);
     }
     function drawTriangle(_centerPoint, _firstVec, _secondVec, _fillColor) {
         const triangle = new Path2D();
