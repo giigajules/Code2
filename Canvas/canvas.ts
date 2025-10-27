@@ -56,8 +56,8 @@ namespace Canvas {
     }
 
     function circleInput(): void {
-        radius = parseInt(prompt("Enter the radius of the triangle-circle:", "1") || "100", 10);
-        numPieces = parseInt(prompt("Enter its number of pieces:", "1") || "5", 10);
+        radius = parseInt(prompt("What shall be the radius of the pizza?", "1") || "100", 10);
+        numPieces = parseInt(prompt("Into how many pieces shall I split the pizza?:", "1") || "5", 10);
     }
 
     function randTriangleInput(): number {

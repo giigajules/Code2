@@ -41,8 +41,8 @@ var Canvas;
         crc2.stroke(triangle);
     }
     function circleInput() {
-        radius = parseInt(prompt("Enter the radius of the triangle-circle:", "1") || "100", 10);
-        numPieces = parseInt(prompt("Enter its number of pieces:", "1") || "5", 10);
+        radius = parseInt(prompt("What shall be the radius of the pizza?", "1") || "100", 10);
+        numPieces = parseInt(prompt("Into how many pieces shall I split the pizza?:", "1") || "5", 10);
     }
     function randTriangleInput() {
         const randTriangleCount = parseInt(prompt("How many triangles do you want to create?", "1") || "1", 10);
