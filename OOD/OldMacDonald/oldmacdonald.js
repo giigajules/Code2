@@ -16,7 +16,7 @@ var OldMacDonald;
     let chicken;
     let cow;
     let animalList = [];
-    let supplyList = [];
+    //let supplyList: Food[] = [];
     function hndLoad() {
         animals = document.getElementsByClassName("animals");
         supplies = document.getElementsByClassName("supplies");
@@ -31,7 +31,7 @@ var OldMacDonald;
         meat = new OldMacDonald.Food("Meat", 3);
         grains = new OldMacDonald.Food("Grains", 10);
         grass = new OldMacDonald.Food("Grass", 26);
-        supplyList = [meat, grains, grass];
+        //supplyList = [meat, grains, grass];
         dog = new OldMacDonald.Animal("Dog", meat, "Woof");
         cat = new OldMacDonald.Animal("Cat", meat, "Meow");
         horse = new OldMacDonald.Animal("Horse", grains, "Wee");

@@ -15,7 +15,7 @@ namespace OldMacDonald {
     let chicken: Animal;
     let cow: Animal;
     let animalList: Animal[] = [];
-    let supplyList: Food[] = [];
+    //let supplyList: Food[] = [];
 
     function hndLoad(): void {
         animals = document.getElementsByClassName("animals") as HTMLCollectionOf<HTMLElement>;
@@ -34,7 +34,7 @@ namespace OldMacDonald {
         meat = new Food("Meat", 3);
         grains = new Food("Grains", 10);
         grass = new Food("Grass", 26);
-        supplyList = [meat, grains, grass];
+        //supplyList = [meat, grains, grass];
 
         dog = new Animal("Dog", meat, "Woof");
         cat = new Animal("Cat", meat, "Meow");
