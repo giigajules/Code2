@@ -2,9 +2,11 @@
 var OldMacDonald;
 (function (OldMacDonald) {
     class Food {
+        name;
         supply;
-        constructor(_supply = 0) {
+        constructor(_name, _supply = 0) {
             this.supply = _supply;
+            this.name = _name;
         }
         reorder() {
             this.supply++;

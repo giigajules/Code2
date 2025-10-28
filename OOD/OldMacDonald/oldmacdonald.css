@@ -1,4 +1,24 @@
 div {
-    background-color: turquoise;
+    background-color: rgb(190, 227, 211);
     margin: 100px;
+    padding: 5px;
+}
+
+.animals {
+    font-size: 100px;
+}
+
+.songs {
+    margin: 1px;
+    padding: 10px;
+}
+
+.supplies {
+    background-color: rgb(128, 221, 128);
+    margin: 5px;
+    padding: 50px;
+}
+
+#game {
+    background-color: darkslategray;
 }
